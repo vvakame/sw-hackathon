@@ -24,19 +24,11 @@
                     "registry": "ajax.googleapis.com",
                     "version": "2.1.3",
                     "minify": true
-                }
-            },
-            resolver: {
-                "ajax.googleapis.com": function (name, info) {
-                    var url = "https://ajax.googleapis.com/ajax/libs/" + name + "/" + info.version + "/" + name;
-                    if (info.minify) {
-                        url += ".min.js"
-                    } else {
-                        url += ".js"
-                    }
-                    return Promise.resolve({
-                        url: url
-                    });
+                },
+                "angular": {
+                    "registry": "npm",
+                    "version": "1.3.15",
+                    "main": "angular.min.js"
                 }
             }
         });

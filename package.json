@@ -1,0 +1,23 @@
+{
+  "name": "sw-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sw.js",
+  "dependencies": {
+    "zlibjs": "^0.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vvakame/sw-hackathon.git"
+  },
+  "author": "vvakame",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vvakame/sw-hackathon/issues"
+  },
+  "homepage": "https://github.com/vvakame/sw-hackathon"
+}

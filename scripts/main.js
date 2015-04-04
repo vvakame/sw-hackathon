@@ -3,6 +3,11 @@
 
     // jQueryが使える！
     $(document).ready(function () {
-        $("body").html("こんにちはこんにちは！");
+        // angularが使える！
+        angular.module("app", []).controller("TestController", function ($scope) {
+            $scope.name = "vvakame";
+        });
+
+        angular.bootstrap(document, ["app"])
     });
 })();

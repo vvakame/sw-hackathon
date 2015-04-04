@@ -5,15 +5,26 @@
     <title>ServiceWorkerハッカソン</title>
     <script type="application/javascript" src="/sw.js"></script>
     <script type="application/javascript" src="/scripts/bundle.js"></script>
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
 </head>
 <body>
 <h1>予定表</h1>
 
 <ul>
     <li>JSへのリクエストを乗っ取る</li>
-    <li>指定したライブラリを展開する(CDN)</li>
-    <li>指定したライブラリを展開する(npm使う？)</li>
+    <li>指定したライブラリを展開する(CDNから取得)</li>
+    <li>指定したライブラリを展開する(npmから取得)</li>
 </ul>
+
+<div ng-controller="TestController" ng-cloak>
+    <input type="text" ng-model="name">
+
+    <div>{{name}}</div>
+</div>
 
 </body>
 </html>
