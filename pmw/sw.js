@@ -7,8 +7,8 @@
         console.log(self);
 
         opts = opts || {};
-        opts.dest = opts.dest || "/scripts/bundle.js";
-        opts.files = opts.files || ["/scripts/main.js"];
+        opts.dest = opts.dest || "/sw-hackathon/scripts/bundle.js";
+        opts.files = opts.files || ["/sw-hackathon/scripts/main.js"];
         opts.dependencies = opts.dependencies || {};
         opts.resolver = opts.resolver || {
             "ajax.googleapis.com": ajaxGoogleApisResolver,
@@ -75,10 +75,10 @@
 
     function npmRegistryResolver(name, dep) {
         if (!gunzipLibLoaded) {
-            importScripts("/node_modules/zlibjs/bin/gunzip.min.js");
+            importScripts("/sw-hackathon/node_modules/zlibjs/bin/gunzip.min.js");
         }
 
-        var url = "http://registry.npmjs.org/" + name + "/-/" + name + "-" + dep.version + ".tgz"
+        var url = "https://registry.npmjs.org/" + name + "/-/" + name + "-" + dep.version + ".tgz";
         return fetch(url, {mode: "cors"})
             .then(function (res) {
                 return res.blob();

@@ -3,7 +3,7 @@
 
     if (typeof window !== "undefined") {
         // window context
-        navigator.serviceWorker.register("/sw.js", {scope: "/"})
+        navigator.serviceWorker.register("/sw-hackathon/sw.js")
             .then(function (registration) {
                 // 登録成功
                 console.log('ServiceWorker registration successful with scope: ', registration.scope);
@@ -13,11 +13,11 @@
             });
     } else {
         // service worker context
-        importScripts("/pmw/sw.js");
+        importScripts("/sw-hackathon/pmw/sw.js");
         pmw.delegate(self, {
-            dest: "/scripts/bundle.js",
+            dest: "/sw-hackathon/scripts/bundle.js",
             files: [
-                "/scripts/main.js"
+                "/sw-hackathon/scripts/main.js"
             ],
             dependencies: {
                 "jquery": {

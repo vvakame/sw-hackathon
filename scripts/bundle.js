@@ -1,1 +1,1 @@
-console.log("raw /scripts/bundle.js");
+console.log("raw /sw-hackathon/scripts/bundle.js");
