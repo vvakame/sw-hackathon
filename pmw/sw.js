@@ -57,6 +57,11 @@
             }
             // 何もしないとネットワークリクエストにフォールバック
         };
+
+        // 時すでに遅し
+        self.addEventListener("activate", function (e) {
+            e.waitUntil(self.clients.claim());
+        });
     }
 
     function ajaxGoogleApisResolver(name, dep) {
